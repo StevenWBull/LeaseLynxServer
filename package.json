@@ -1,7 +1,7 @@
 {
-    "name": "studystackserver",
+    "name": "leaselynxserver",
     "version": "1.0.0",
-    "description": "INITIAL README",
+    "description": "An app built for home management",
     "main": "server.js",
     "scripts": {
         "test": "test server.js",
