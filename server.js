@@ -8,7 +8,7 @@ const connectDB = require('./config/dbConn');
 
 const PORT = process.env.PORT || 5050;
 
-connectDB();
+// connectDB();
 
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
@@ -18,7 +18,9 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-mongoose.connection.once('open', () => {
-    console.log('MongoDB connected!');
-    app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
-});
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+// mongoose.connection.once('open', () => {
+//     console.log('MongoDB connected!');
+//     app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+// });
