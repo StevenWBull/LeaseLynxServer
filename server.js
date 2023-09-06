@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
+app.get('/v1', (req, res) => {
+    res.send('API v1');
+});
+
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 // mongoose.connection.once('open', () => {
