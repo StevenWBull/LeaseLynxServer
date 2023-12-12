@@ -6,6 +6,8 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const connectDB = require('./config/dbConn');
 const { logger, logEvents } = require('./middleware/logEvents');
+const errorHandler = require('./middleware/errorHandler');
+const send404 = require('./middleware/send404');
 
 const PORT = process.env.PORT || 5060;
 
@@ -23,7 +25,8 @@ app.use('/v1/auth', require('./routes/api/authRoutes'));
 
 app.all('*', (req, res) => send404(req, res));
 
-// app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.use(errorHandler);
+
 mongoose.connection.once('open', () => {
     console.log('MongoDB connected!');
     app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
