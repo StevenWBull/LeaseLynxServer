@@ -9,7 +9,7 @@ const { logger, logEvents } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const send404 = require('./middleware/send404');
 
-const PORT = process.env.PORT || 5060;
+const PORT = process.env.PORT || 5050;
 
 connectDB();
 

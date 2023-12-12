@@ -3,3 +3,14 @@
 20231212	13:01:49	aabd8bfe-995c-4d3c-b161-d6b4af2ceb6b	POST	undefined	/
 20231212	13:02:32	232b223d-1fbb-4f09-a650-a0d3e1101cd9	POST	undefined	/
 20231212	13:03:20	0bebe1c7-934d-4732-9b57-66d1c42946bc	POST	undefined	/
+20231212	13:20:06	4bd621b6-77a3-4006-b5ad-7c72983436b9	POST	undefined	/register
+20231212	13:21:09	944a22e0-ac4e-4039-9813-2dc911bc64e2	POST	undefined	/v1/auth/register
+20231212	13:22:59	5127794e-46f4-4797-8aaa-854a8240a320	POST	undefined	/v1/auth/register
+20231212	13:23:10	1ca3d682-54bd-409e-b1e1-4359f03dc546	POST	undefined	/v1/auth/register
+20231212	15:01:55	b369b858-0327-478d-87bd-6a9a929204bd	POST	undefined	/v1/auth/login
+20231212	15:05:38	90013d25-6421-40a5-a393-44092acc8bca	OPTIONS	http://localhost:3000	/v1/auth/login
+20231212	15:05:38	6c733595-82cd-4835-af40-8e63cbf1366d	POST	http://localhost:3000	/v1/auth/login
+20231212	15:39:25	5d478ff3-3e44-4cf1-a314-980392dee297	OPTIONS	http://localhost:3000	/v1/auth/login
+20231212	15:39:25	9cf0cd00-586c-418c-a3ff-665587624c7f	POST	http://localhost:3000	/v1/auth/login
+20231212	15:52:55	0224c524-9098-42aa-a503-cecf41da01d5	OPTIONS	http://localhost:3000	/v1/auth/login
+20231212	15:52:55	c0bdc280-3434-4509-b4ed-68f8af2da98b	POST	http://localhost:3000	/v1/auth/login
