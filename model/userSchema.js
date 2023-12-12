@@ -1,32 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    first_name: {
+const leaseNotesSchema = new Schema({
+    note: {
         type: String,
         required: true,
     },
-    last_name: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        required: true,
-    },
-    pword: {
-        type: String,
-        required: true,
-    },
-    leaseData: {
-        type: [leaseDataSchema],
-        default: [],
-    },
-    created_at: {
-        type: Date,
-        default: Date.now,
-    },
-    updated_at: {
+    added_date: {
         type: Date,
         default: Date.now,
     },
@@ -84,12 +64,32 @@ const leaseDataSchema = new Schema({
     leaseNotes: [leaseNotesSchema],
 });
 
-const leaseNotesSchema = new Schema({
-    note: {
+const userSchema = new Schema({
+    first_name: {
         type: String,
         required: true,
     },
-    added_date: {
+    last_name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    pword: {
+        type: String,
+        required: true,
+    },
+    leaseData: {
+        type: [leaseDataSchema],
+        default: [],
+    },
+    created_at: {
+        type: Date,
+        default: Date.now,
+    },
+    updated_at: {
         type: Date,
         default: Date.now,
     },
