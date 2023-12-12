@@ -63,7 +63,7 @@ const leaseDataSchema = new Schema({
     },
     leasePicture: {
         type: String,
-        required: true,
+        required: false,
     },
     leaseStart: {
         type: Date,
@@ -75,7 +75,7 @@ const leaseDataSchema = new Schema({
     },
     leaseMonthlyRent: {
         type: Number,
-        required: true,
+        required: false,
     },
     rentDueDate: {
         type: Number,
