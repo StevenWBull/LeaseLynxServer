@@ -14,14 +14,20 @@ const logEvents = async (message, logName) => {
             await fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
         }
 
-        await fsPromises.appendFile(path.join(__dirname, '..', 'logs', logName), logItem);
+        await fsPromises.appendFile(
+            path.join(__dirname, '..', 'logs', logName),
+            logItem
+        );
     } catch (err) {
         console.log(err);
     }
 };
 
 const logger = async (req, res, next) => {
-    logEvents(`${req.method}\t${req.headers.origin}\t${req.url}`, 'requestLog.txt');
+    logEvents(
+        `${req.method}\t${req.headers.origin}\t${req.url}`,
+        'requestLog.txt'
+    );
     console.log(`${req.method}\t${req.path}`);
     next();
 };
