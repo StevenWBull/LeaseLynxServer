@@ -40,7 +40,7 @@ const addRegisteredUser = async (req, res) => {
         });
     } catch (err) {
         return res.status(500).json({
-            error: 'Could not register user.',
+            message: 'Could not register user.',
             error: err.message,
         });
     }
@@ -73,13 +73,13 @@ const loginUser = async (req, res) => {
             });
         } else {
             return res.status(404).json({
-                message: `User not found.`,
+                message: `Invalid Login. Please try again.`,
             });
         }
     } catch (err) {
         return res.status(500).json({
             message: 'Could not login user.',
-            err: err.message,
+            error: err.message,
         });
     }
 };
