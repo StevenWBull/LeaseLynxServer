@@ -1,7 +1,13 @@
 // Middleware to verify if the category to be deleted exists
 const verifyLeaseDataToDelete = async (req, res, next) => {
     const user = req.user;
-    const leaseDataId = req.body.leaseId;
+    const leaseDataId = req.params.leaseId;
+
+    if (!leaseDataId) {
+        return res.status(400).json({
+            message: 'leaseId field is required.',
+        });
+    }
 
     try {
         // If category ID does not exist, return error

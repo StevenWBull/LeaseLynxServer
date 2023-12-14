@@ -18,6 +18,9 @@ router
         verifyLeaseDataToAdd,
         leaseDataController.addNewLeaseData
     )
+
+router
+    .route('/:userId/:leaseId')
     .delete(
         retrieveUserInfo,
         verifyLeaseDataToDelete,
