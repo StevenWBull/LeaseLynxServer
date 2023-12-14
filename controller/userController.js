@@ -14,16 +14,16 @@ const _generateJWTToken = (user) => {
 };
 
 const getUser = async (req, res) => {
-    const { userID } = req?.body;
-    if (!userID) {
+    const { userId } = req?.body;
+    if (!userId) {
         // 400 Bad Request
         return res.status(400).json({
-            error: 'userID request variable is required',
+            error: 'userId request variable is required',
         });
     }
     try {
         // Find user via built in schema function
-        const user = await User.findById(userID);
+        const user = await User.findById(userId);
 
         if (user) {
             // 200 OK
@@ -45,7 +45,7 @@ const getUser = async (req, res) => {
 
 // Update User info from the req.user and req.filter variables. These are passed from the verifyUserPatch middleware.
 const patchUser = async (req, res) => {
-    const { userID, first_name, last_name, email, pword } = req?.body;
+    const { userId, first_name, last_name, email, pword } = req?.body;
 
     // User data to update if included
     let filter = {};
@@ -62,7 +62,7 @@ const patchUser = async (req, res) => {
     }
 
     try {
-        let user = await User.findOneAndUpdate({ _id: userID }, filter, {
+        let user = await User.findOneAndUpdate({ _id: userId }, filter, {
             new: true,
         });
 
