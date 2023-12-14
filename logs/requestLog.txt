@@ -344,3 +344,7 @@
 20231214	09:12:35	1fa93d2d-d1f0-492f-b74e-3c8ac14cf4ce	OPTIONS	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all
 20231214	09:12:35	8ff30aef-f9ee-4d11-98ed-e6308f9cbadb	GET	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all
 20231214	09:12:35	90867731-3dd8-4e36-a42c-8d2ccfb032d4	GET	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all
+20231214	09:30:17	f73640d6-0851-492b-81cd-6d590508bb33	OPTIONS	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all
+20231214	09:30:17	b453ccf4-48b7-4fde-9429-07f19fbeea7b	OPTIONS	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all
+20231214	09:30:17	98006663-e5f6-49fd-aabd-4bd6fcb3639a	GET	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all
+20231214	09:30:17	4d905a1c-44fd-4c2c-8e5f-2b90b7ad888e	GET	http://localhost:3000	/v1/lease/6578b31e76686f0b25c0a1e0/all

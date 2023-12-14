@@ -8,7 +8,7 @@ const addNewNote = async (req, res) => {
 
     try {
         // Add new note to leaseData
-        const note = await LeaseNotes.create({ note: newNote});
+        const note = await LeaseNotes.create({ note: newNote });
         leaseData.leaseNotes.push(note);
 
         await user.save();

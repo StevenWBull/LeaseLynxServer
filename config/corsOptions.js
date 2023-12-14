@@ -1,5 +1,5 @@
 const corsOptions = {
-    origin: '*',
+    origin: 'https://www.leaselynx.app',
     optionsSuccessStatus: 200,
 };
 
