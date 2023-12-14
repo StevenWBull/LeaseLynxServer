@@ -45,8 +45,7 @@ const getUser = async (req, res) => {
 
 // Update User info from the req.user and req.filter variables. These are passed from the verifyUserPatch middleware.
 const patchUser = async (req, res) => {
-    const { userID, first_name, last_name, email, pword } =
-        req?.body;
+    const { userID, first_name, last_name, email, pword } = req?.body;
 
     // User data to update if included
     let filter = {};

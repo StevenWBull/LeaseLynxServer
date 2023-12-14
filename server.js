@@ -32,6 +32,7 @@ app.use(verifyToken);
 
 // Protected Routes
 app.use('/v1/user', require('./routes/api/userRoutes'));
+app.use('/v1/lease', require('./routes/api/LeaseDataRoutes'));
 
 app.all('*', (req, res) => send404(req, res));
 

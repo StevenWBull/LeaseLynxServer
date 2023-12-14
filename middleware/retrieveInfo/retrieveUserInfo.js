@@ -2,20 +2,20 @@ const { User } = require('../../model/userSchema');
 
 // Middleware to find and return the user
 const retrieveUserInfo = async (req, res, next) => {
-    let userID = req?.body?.userID;
+    let userId = req?.body?.userId;
 
-    if (!userID) {
-        userID = req?.query?.userID;
+    if (!userId) {
+        userId = req?.params?.userId;
     }
 
-    if (!userID) {
+    if (!userId) {
         return res.status(400).json({
-            error: 'userID field is required.',
+            error: 'userId field is required.',
         });
     }
     try {
         // Check if user exists
-        const user = await User.findById(userID);
+        const user = await User.findById(userId);
 
         if (!user) {
             // 404 Not Found

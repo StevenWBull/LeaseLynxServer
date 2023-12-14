@@ -59,9 +59,12 @@ const leaseDataSchema = new Schema({
     },
     rentDueDate: {
         type: Number,
-        required: true,
+        required: false,
     },
-    leaseNotes: [leaseNotesSchema],
+    leaseNotes: {
+        type: [leaseNotesSchema],
+        default: [],
+    },
 });
 
 const userSchema = new Schema({
@@ -96,11 +99,11 @@ const userSchema = new Schema({
 });
 
 User = mongoose.model('User', userSchema);
-LeaseDataSchema = mongoose.model('leaseDataSchema', leaseDataSchema);
-LeaseNotesSchema = mongoose.model('leaseNotesSchema', leaseNotesSchema);
+LeaseData = mongoose.model('LeaseData', leaseDataSchema);
+LeaseNotes = mongoose.model('LeaseNotes', leaseNotesSchema);
 
 module.exports = {
     User,
-    LeaseDataSchema,
-    LeaseNotesSchema,
+    LeaseData,
+    LeaseNotes,
 };
