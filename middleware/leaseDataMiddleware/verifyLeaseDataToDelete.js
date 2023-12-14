@@ -1,4 +1,4 @@
-// Middleware to verify if the category to be deleted exists
+// Middleware to verify if the lease to be deleted exists
 const verifyLeaseDataToDelete = async (req, res, next) => {
     const user = req.user;
     const leaseDataId = req.params.leaseId;
@@ -10,7 +10,7 @@ const verifyLeaseDataToDelete = async (req, res, next) => {
     }
 
     try {
-        // If category ID does not exist, return error
+        // If lease ID does not exist, return error
         if (!user.leaseData.id(leaseDataId)) {
             return res.status(400).json({
                 message: `Lease Data ID ${leaseDataId} does not exist for user.`,

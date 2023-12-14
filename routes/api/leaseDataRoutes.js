@@ -6,7 +6,6 @@ const verifyLeaseDataToDelete = require('../../middleware/leaseDataMiddleware/ve
 const leaseDataController = require('../../controller/leaseDataController');
 
 // Get all leaseData or post more leaseData to a user via their ID
-router;
 router
     .route('/:userId/all')
     .get(retrieveUserInfo, leaseDataController.getAllLeaseData);
@@ -17,7 +16,7 @@ router
         retrieveUserInfo,
         verifyLeaseDataToAdd,
         leaseDataController.addNewLeaseData
-    )
+    );
 
 router
     .route('/:userId/:leaseId')
